@@ -1,0 +1,157 @@
+[gd_scene load_steps=13 format=3 uid="uid://bfee3yu2a4vig"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_2aujw"]
+[ext_resource type="Texture2D" uid="uid://ddnpda74po2p5" path="res://sprites/camera_buna.png" id="2_nywi6"]
+[ext_resource type="Texture2D" uid="uid://oqi5hwebfijv" path="res://sprites/arrow.png" id="3_l8q8x"]
+[ext_resource type="Texture2D" uid="uid://dv4kyi6b5op6r" path="res://sprites/lampa.png" id="4_07lcm"]
+[ext_resource type="Texture2D" uid="uid://b4s6qu5wgw83a" path="res://sprites/2d_lights_and_shadows_neutral_point_light.webp" id="5_l0yif"]
+[ext_resource type="Texture2D" uid="uid://bvksuev8bh3h0" path="res://sprites/dulap_deschis.png" id="7_2k2v4"]
+[ext_resource type="Texture2D" uid="uid://xg7kg36u2klo" path="res://sprites/usa_inchisa.png" id="7_q3urp"]
+[ext_resource type="Texture2D" uid="uid://k143bljn6lnm" path="res://sprites/instructions.png" id="8_2w0fn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oihse"]
+size = Vector2(335.125, 1079.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wurq1"]
+size = Vector2(1919.5, 132.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrvlu"]
+size = Vector2(109, 511)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_02b61"]
+size = Vector2(432, 485)
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_2aujw")
+
+[node name="Sprite-0001" type="Sprite2D" parent="."]
+position = Vector2(720, 540)
+scale = Vector2(27, 27)
+texture = ExtResource("2_nywi6")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(662, 632)
+limit_left = -630
+limit_top = 0
+limit_right = 2070
+limit_bottom = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="left_side" type="Area2D" parent="CanvasLayer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/left_side"]
+position = Vector2(133.563, 540)
+shape = SubResource("RectangleShape2D_oihse")
+
+[node name="right_side" type="Area2D" parent="CanvasLayer"]
+position = Vector2(1500, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/right_side"]
+position = Vector2(280.125, 540)
+shape = SubResource("RectangleShape2D_oihse")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="CanvasLayer"]
+energy = 0.9
+blend_mode = 1
+
+[node name="arrow" type="Area2D" parent="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/arrow"]
+self_modulate = Color(0.603922, 0.603922, 0.603922, 1)
+position = Vector2(1000.5, 997)
+scale = Vector2(39.5, 11.3333)
+texture = ExtResource("3_l8q8x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/arrow"]
+position = Vector2(962.25, 1012.25)
+shape = SubResource("RectangleShape2D_wurq1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Lampa" type="Sprite2D" parent="."]
+position = Vector2(188, 541)
+scale = Vector2(9, 9)
+texture = ExtResource("4_07lcm")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lampa"]
+position = Vector2(-1.38889, -2.22222)
+scale = Vector2(0.281684, 0.257813)
+color = Color(1, 1, 0.207843, 1)
+energy = 2.15
+texture = ExtResource("5_l0yif")
+
+[node name="UsaStanga" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UsaStanga"]
+position = Vector2(-547.5, 743.5)
+shape = SubResource("RectangleShape2D_wrvlu")
+
+[node name="UsaDrepta" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UsaDrepta"]
+position = Vector2(1989.5, 744)
+shape = SubResource("RectangleShape2D_wrvlu")
+
+[node name="UsaInchisaStanga" type="Sprite2D" parent="."]
+position = Vector2(-548, 756)
+scale = Vector2(27, 27)
+texture = ExtResource("7_q3urp")
+
+[node name="UsaInchisaDreapta" type="Sprite2D" parent="."]
+position = Vector2(1989, 756)
+scale = Vector2(27, 27)
+texture = ExtResource("7_q3urp")
+flip_h = true
+
+[node name="DulapDeschis" type="Sprite2D" parent="."]
+position = Vector2(667, 620)
+scale = Vector2(27, 27)
+texture = ExtResource("7_2k2v4")
+
+[node name="DulapArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DulapArea"]
+position = Vector2(667, 620.5)
+shape = SubResource("RectangleShape2D_02b61")
+
+[node name="instructions" type="Label" parent="."]
+z_index = 1
+offset_left = -593.0
+offset_top = 654.0
+offset_right = -169.0
+offset_bottom = 853.0
+theme_override_font_sizes/font_size = 50
+text = "CLICK HERE TO GO TO THE DOOR"
+autowrap_mode = 2
+
+[node name="Instructions" type="Sprite2D" parent="."]
+position = Vector2(-401, 744)
+scale = Vector2(8, 8)
+texture = ExtResource("8_2w0fn")
+
+[node name="instructions2" type="Label" parent="."]
+z_index = 1
+offset_left = 1615.0
+offset_top = 654.0
+offset_right = 2039.0
+offset_bottom = 853.0
+theme_override_font_sizes/font_size = 50
+text = "CLICK HERE TO GO TO THE DOOR"
+autowrap_mode = 2
+
+[node name="Instructions2" type="Sprite2D" parent="."]
+position = Vector2(1807, 744)
+scale = Vector2(8, 8)
+texture = ExtResource("8_2w0fn")
+
+[connection signal="mouse_entered" from="CanvasLayer/left_side" to="." method="_on_left_side_mouse_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/right_side" to="." method="_on_right_side_mouse_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/arrow" to="." method="_on_arrow_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/arrow" to="." method="_on_arrow_mouse_exited"]
+[connection signal="mouse_entered" from="UsaStanga" to="." method="_on_usa_stanga_mouse_entered"]
+[connection signal="mouse_exited" from="UsaStanga" to="." method="_on_usa_stanga_mouse_exited"]
+[connection signal="mouse_entered" from="UsaDrepta" to="." method="_on_usa_drepta_mouse_entered"]
+[connection signal="mouse_exited" from="UsaDrepta" to="." method="_on_usa_drepta_mouse_exited"]
+[connection signal="mouse_entered" from="DulapArea" to="." method="_on_dulap_area_mouse_entered"]
+[connection signal="mouse_exited" from="DulapArea" to="." method="_on_dulap_area_mouse_exited"]

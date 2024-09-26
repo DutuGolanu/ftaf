@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctdiob70qp8fl"]
+
+[ext_resource type="Script" path="res://thugs_behaviour.gd" id="1_cw75f"]
+[ext_resource type="PackedScene" uid="uid://bryd8jxk35r8j" path="res://love_and_light_tv.tscn" id="2_b70oq"]
+
+[node name="ThugsBehaviour" type="Node2D"]
+script = ExtResource("1_cw75f")
+
+[node name="ThugTimerNight1" type="Timer" parent="." groups=["love_and_light_tvs"]]
+wait_time = 5.0
+autostart = true
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_b70oq")]
+visible = false
+
+[connection signal="timeout" from="ThugTimerNight1" to="." method="_on_thug_timer_night_1_timeout"]
+
+[editable path="CharacterBody2D"]

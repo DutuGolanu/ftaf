@@ -1,0 +1,171 @@
+[gd_scene load_steps=4 format=3 uid="uid://pjlgdlmte1vl"]
+
+[ext_resource type="Script" path="res://floor_animation.gd" id="1_87gxp"]
+[ext_resource type="Texture2D" uid="uid://ddw8rmlhqsrd6" path="res://sprites/podea.png" id="2_sbg13"]
+[ext_resource type="AudioStream" uid="uid://b566b5m5aweva" path="res://audio/Five Nights At Freddy's 4 Sound - Player Sprinting (mp3cut.net).mp3" id="3_dn0cl"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_87gxp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+z_index = 1
+position = Vector2(700, 547)
+
+[node name="Podea" type="Sprite2D" parent="."]
+position = Vector2(1860, 982)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea2" type="Sprite2D" parent="."]
+position = Vector2(1857, 640)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea3" type="Sprite2D" parent="."]
+position = Vector2(1222, 631)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea5" type="Sprite2D" parent="."]
+position = Vector2(1862, 360)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea6" type="Sprite2D" parent="."]
+position = Vector2(1222, 315)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea7" type="Sprite2D" parent="."]
+position = Vector2(1229, -3.99997)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea9" type="Sprite2D" parent="."]
+position = Vector2(539, 10)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea10" type="Sprite2D" parent="."]
+position = Vector2(534, 345)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea11" type="Sprite2D" parent="."]
+position = Vector2(532, 683)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea12" type="Sprite2D" parent="."]
+position = Vector2(518, 997)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea13" type="Sprite2D" parent="."]
+position = Vector2(-157, 999)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea14" type="Sprite2D" parent="."]
+position = Vector2(-150, 690)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea15" type="Sprite2D" parent="."]
+position = Vector2(-162, 397)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea16" type="Sprite2D" parent="."]
+position = Vector2(-145, 76)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea8" type="Sprite2D" parent="."]
+position = Vector2(1897, 36)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea4" type="Sprite2D" parent="."]
+position = Vector2(1216, 976)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea17" type="Sprite2D" parent="."]
+position = Vector2(1252, 1228)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea18" type="Sprite2D" parent="."]
+position = Vector2(626, 1259)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea19" type="Sprite2D" parent="."]
+position = Vector2(1922, 1273)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea20" type="Sprite2D" parent="."]
+position = Vector2(-16, 1299)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea21" type="Sprite2D" parent="."]
+position = Vector2(22, -249)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea22" type="Sprite2D" parent="."]
+position = Vector2(667, -318)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea23" type="Sprite2D" parent="."]
+position = Vector2(1373, -318)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea24" type="Sprite2D" parent="."]
+position = Vector2(2077, -294)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea25" type="Sprite2D" parent="."]
+position = Vector2(2534, 39)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea26" type="Sprite2D" parent="."]
+position = Vector2(2560, 365)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea27" type="Sprite2D" parent="."]
+position = Vector2(2531, 672)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea28" type="Sprite2D" parent="."]
+position = Vector2(2531, 993)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="Podea29" type="Sprite2D" parent="."]
+position = Vector2(2571, 1305)
+scale = Vector2(10, 10)
+texture = ExtResource("2_sbg13")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+energy = 0.7
+blend_mode = 1
+
+[node name="Steps" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_dn0cl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -486.0
+offset_top = -310.0
+offset_right = 2211.0
+offset_bottom = 1527.0
+color = Color(0, 0, 0, 1)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://djbp7cjmh24vy"
+path="res://.godot/imported/WhatsApp Video 2024-04-06 at 19 (mp3cut.net).mp3-f7c6328b193164f1b2aca4477e8bd7a7.mp3str"
+
+[deps]
+
+source_file="res://audio/WhatsApp Video 2024-04-06 at 19 (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/WhatsApp Video 2024-04-06 at 19 (mp3cut.net).mp3-f7c6328b193164f1b2aca4477e8bd7a7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

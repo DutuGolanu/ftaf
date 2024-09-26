@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://pjlgdlmte1vl"]
+
+[ext_resource type="Texture2D" uid="uid://g7ydhfo54fe6" path="res://sprites/perete.png" id="1_yojvx"]
+[ext_resource type="Script" path="res://Camera2D.gd" id="2_4lj8n"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Perete" type="Sprite2D" parent="."]
+position = Vector2(894, 774.873)
+rotation = 1.5708
+scale = Vector2(374.467, 170)
+texture = ExtResource("1_yojvx")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("2_4lj8n")

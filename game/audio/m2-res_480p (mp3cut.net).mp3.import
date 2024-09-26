@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0fg7rkayt4tp"
+path="res://.godot/imported/m2-res_480p (mp3cut.net).mp3-ff988f3a72defd1c1f8c2d07aa782263.mp3str"
+
+[deps]
+
+source_file="res://audio/m2-res_480p (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/m2-res_480p (mp3cut.net).mp3-ff988f3a72defd1c1f8c2d07aa782263.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmgej38kdc3pk"]
+
+[ext_resource type="Texture2D" uid="uid://iombo211lffq" path="res://sprites/Screenshot_2024-04-01_200719-removebg-preview.png" id="1_aaaxo"]
+
+[node name="BrandonForBG" type="Sprite2D"]
+texture = ExtResource("1_aaaxo")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+blend_mode = 1

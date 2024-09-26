@@ -1,0 +1,121 @@
+[gd_scene load_steps=11 format=3 uid="uid://bfee3yu2a4vig"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_2aujw"]
+[ext_resource type="Texture2D" uid="uid://wn1nklbra2y4" path="res://sprites/camera.png" id="2_6udo4"]
+[ext_resource type="Texture2D" uid="uid://oqi5hwebfijv" path="res://sprites/arrow.png" id="3_l8q8x"]
+[ext_resource type="Texture2D" uid="uid://dv4kyi6b5op6r" path="res://sprites/lampa.png" id="4_07lcm"]
+[ext_resource type="Texture2D" uid="uid://b4s6qu5wgw83a" path="res://sprites/2d_lights_and_shadows_neutral_point_light.webp" id="5_l0yif"]
+[ext_resource type="Texture2D" uid="uid://25whs44oklx2" path="res://sprites/usa.png" id="6_lpuv4"]
+[ext_resource type="Texture2D" uid="uid://cwy3qdbw0mnsc" path="res://sprites/usa_deschisa.png" id="7_k3wy6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oihse"]
+size = Vector2(335.125, 1079.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wurq1"]
+size = Vector2(1919.5, 132.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrvlu"]
+size = Vector2(178, 499.5)
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_2aujw")
+
+[node name="Sprite-0001" type="Sprite2D" parent="."]
+position = Vector2(720, 540)
+scale = Vector2(27, 27)
+texture = ExtResource("2_6udo4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(662, 632)
+limit_left = -630
+limit_top = 0
+limit_right = 2070
+limit_bottom = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="left_side" type="Area2D" parent="CanvasLayer"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/left_side"]
+position = Vector2(133.563, 540)
+shape = SubResource("RectangleShape2D_oihse")
+
+[node name="right_side" type="Area2D" parent="CanvasLayer"]
+position = Vector2(1500, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/right_side"]
+position = Vector2(280.125, 540)
+shape = SubResource("RectangleShape2D_oihse")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="CanvasLayer"]
+energy = 0.9
+blend_mode = 1
+
+[node name="arrow" type="Area2D" parent="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/arrow"]
+self_modulate = Color(0.603922, 0.603922, 0.603922, 1)
+position = Vector2(1000.5, 997)
+scale = Vector2(39.5, 11.3333)
+texture = ExtResource("3_l8q8x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/arrow"]
+position = Vector2(962.25, 1012.25)
+shape = SubResource("RectangleShape2D_wurq1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Lampa" type="Sprite2D" parent="."]
+position = Vector2(188, 541)
+scale = Vector2(9, 9)
+texture = ExtResource("4_07lcm")
+
+[node name="PointLight2D" type="PointLight2D" parent="Lampa"]
+position = Vector2(-1.38889, -2.22222)
+scale = Vector2(0.281684, 0.257813)
+color = Color(1, 1, 0.207843, 1)
+energy = 2.15
+texture = ExtResource("5_l0yif")
+
+[node name="Usa" type="Sprite2D" parent="."]
+position = Vector2(1961, 789)
+scale = Vector2(26, 26)
+texture = ExtResource("6_lpuv4")
+
+[node name="Usa2" type="Sprite2D" parent="."]
+position = Vector2(-521, 789)
+scale = Vector2(26, 26)
+texture = ExtResource("6_lpuv4")
+flip_h = true
+
+[node name="UsaDeschisaDreapta" type="Sprite2D" parent="."]
+position = Vector2(1933.5, 756)
+scale = Vector2(26.35, 26.9)
+texture = ExtResource("7_k3wy6")
+
+[node name="UsaDeschisaStanga" type="Sprite2D" parent="."]
+position = Vector2(-494.25, 756.25)
+scale = Vector2(26.725, 26.975)
+texture = ExtResource("7_k3wy6")
+flip_h = true
+
+[node name="UsaStanga" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UsaStanga"]
+position = Vector2(-529, 768)
+shape = SubResource("RectangleShape2D_wrvlu")
+
+[node name="UsaDrepta" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UsaDrepta"]
+position = Vector2(1972, 770)
+shape = SubResource("RectangleShape2D_wrvlu")
+
+[connection signal="mouse_entered" from="CanvasLayer/left_side" to="." method="_on_left_side_mouse_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/right_side" to="." method="_on_right_side_mouse_entered"]
+[connection signal="mouse_entered" from="CanvasLayer/arrow" to="." method="_on_arrow_mouse_entered"]
+[connection signal="mouse_exited" from="CanvasLayer/arrow" to="." method="_on_arrow_mouse_exited"]
+[connection signal="mouse_entered" from="UsaStanga" to="." method="_on_usa_stanga_mouse_entered"]
+[connection signal="mouse_exited" from="UsaStanga" to="." method="_on_usa_stanga_mouse_exited"]
+[connection signal="mouse_entered" from="UsaDrepta" to="." method="_on_usa_drepta_mouse_entered"]
+[connection signal="mouse_exited" from="UsaDrepta" to="." method="_on_usa_drepta_mouse_exited"]

@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnnkkunu4agl6"]
+
+[ext_resource type="Script" path="res://DreamyJumpScare.gd" id="1_c61sy"]
+[ext_resource type="Texture2D" uid="uid://ex3ts40ed33h" path="res://sprites/Screenshot_2024-04-02_160547-removebg-preview.png" id="2_yxnpr"]
+[ext_resource type="AudioStream" uid="uid://chyc2grxlb136" path="res://audio/FNAF 4 Jumpscare Sound Effect.mp3" id="3_q0ruj"]
+
+[node name="DreamyJumpScare" type="CanvasLayer"]
+script = ExtResource("1_c61sy")
+
+[node name="dreamy" type="Sprite2D" parent="."]
+position = Vector2(886, 810)
+scale = Vector2(3, 3)
+texture = ExtResource("2_yxnpr")
+
+[node name="JumpScareSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_q0ruj")

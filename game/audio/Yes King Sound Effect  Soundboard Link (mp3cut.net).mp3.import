@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5fiw6t3gyq3h"
+path="res://.godot/imported/Yes King Sound Effect  Soundboard Link (mp3cut.net).mp3-e7494bb313c6f4384d7297ccd7c25906.mp3str"
+
+[deps]
+
+source_file="res://audio/Yes King Sound Effect  Soundboard Link (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/Yes King Sound Effect  Soundboard Link (mp3cut.net).mp3-e7494bb313c6f4384d7297ccd7c25906.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

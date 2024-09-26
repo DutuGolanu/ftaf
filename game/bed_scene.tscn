@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://coadmhvij6xmh"]
+
+[ext_resource type="Script" path="res://bed_scene.gd" id="1_rmsv6"]
+[ext_resource type="Texture2D" uid="uid://klvs5bm6j3mj" path="res://sprites/pat.png" id="2_cwt1q"]
+[ext_resource type="Texture2D" uid="uid://b4s6qu5wgw83a" path="res://sprites/2d_lights_and_shadows_neutral_point_light.webp" id="3_jdcie"]
+[ext_resource type="Texture2D" uid="uid://oqi5hwebfijv" path="res://sprites/arrow.png" id="4_5v8xi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_452go"]
+size = Vector2(1919.5, 132.5)
+
+[node name="bed_scene" type="Node2D"]
+script = ExtResource("1_rmsv6")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(956.5, 541.5)
+scale = Vector2(14.9297, 8.44531)
+
+[node name="Pat" type="Sprite2D" parent="."]
+position = Vector2(835, 542.75)
+scale = Vector2(31, 31.0143)
+texture = ExtResource("2_cwt1q")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+energy = 0.95
+blend_mode = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(1002, 604)
+texture = ExtResource("3_jdcie")
+texture_scale = 4.6
+
+[node name="arrow" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="arrow"]
+self_modulate = Color(0.603922, 0.603922, 0.603922, 1)
+position = Vector2(1000.5, 997)
+scale = Vector2(39.5, 11.3333)
+texture = ExtResource("4_5v8xi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="arrow"]
+position = Vector2(962.25, 1012.25)
+shape = SubResource("RectangleShape2D_452go")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[node name="FlashingTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Love_and_light_tv_timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="mouse_entered" from="arrow" to="." method="_on_arrow_mouse_entered"]
+[connection signal="mouse_exited" from="arrow" to="." method="_on_arrow_mouse_exited"]
+[connection signal="timeout" from="FlashingTimer" to="." method="_on_flashing_timer_timeout"]

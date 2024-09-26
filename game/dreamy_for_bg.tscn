@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dstnf0q7doi5o"]
+
+[ext_resource type="Texture2D" uid="uid://ex3ts40ed33h" path="res://sprites/Screenshot_2024-04-02_160547-removebg-preview.png" id="1_p7hb6"]
+
+[node name="DreamyForBG" type="Sprite2D"]
+texture = ExtResource("1_p7hb6")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+blend_mode = 1

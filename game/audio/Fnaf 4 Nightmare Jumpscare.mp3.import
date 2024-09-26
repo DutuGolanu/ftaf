@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dxy75pm3xufak"
+path="res://.godot/imported/Fnaf 4 Nightmare Jumpscare.mp3-d2cf571fedadd9d976178a49d6eb09c4.mp3str"
+
+[deps]
+
+source_file="res://audio/Fnaf 4 Nightmare Jumpscare.mp3"
+dest_files=["res://.godot/imported/Fnaf 4 Nightmare Jumpscare.mp3-d2cf571fedadd9d976178a49d6eb09c4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

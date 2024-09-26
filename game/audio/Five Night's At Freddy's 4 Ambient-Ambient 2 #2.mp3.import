@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ranvf1t0uewu"
+path="res://.godot/imported/Five Night's At Freddy's 4 Ambient-Ambient 2 #2.mp3-df841e97ac0b586dc9c223dc19497f22.mp3str"
+
+[deps]
+
+source_file="res://audio/Five Night's At Freddy's 4 Ambient-Ambient 2 #2.mp3"
+dest_files=["res://.godot/imported/Five Night's At Freddy's 4 Ambient-Ambient 2 #2.mp3-df841e97ac0b586dc9c223dc19497f22.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmh8ltp85jwyr"]
+
+[ext_resource type="Texture2D" uid="uid://kt61enbsnpow" path="res://sprites/Screenshot_2024-04-03_183022-removebg-preview.png" id="1_jt21y"]
+[ext_resource type="Script" path="res://love_and_light_tv_jumpscare.gd" id="1_wxnn2"]
+[ext_resource type="AudioStream" uid="uid://b5fiw6t3gyq3h" path="res://audio/Yes King Sound Effect  Soundboard Link (mp3cut.net).mp3" id="3_wg1jp"]
+
+[node name="Love_and_light_tv_jumpscare" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_wxnn2")
+
+[node name="love_and_light_tv" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(2, 2)
+texture = ExtResource("1_jt21y")
+
+[node name="JumpScareSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wg1jp")
+volume_db = -5.0
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 3
+wait_time = 2.42
+one_shot = true
+
+[connection signal="love_and_light_tv_jumpscare" from="." to="." method="_on_love_and_light_tv_jumpscare"]
+[connection signal="finished" from="JumpScareSound" to="." method="_on_jump_scare_sound_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://g0vtjiwhxbof"]
+
+[ext_resource type="Script" path="res://hol_stanga.gd" id="1_v4nhx"]
+[ext_resource type="Texture2D" uid="uid://c83n1oi7sibxh" path="res://sprites/hol.png" id="2_fwxco"]
+[ext_resource type="Texture2D" uid="uid://m05tk07uvocm" path="res://sprites/lumina_hol.png" id="3_pkdxh"]
+[ext_resource type="Texture2D" uid="uid://b4s6qu5wgw83a" path="res://sprites/2d_lights_and_shadows_neutral_point_light.webp" id="4_3bdqn"]
+[ext_resource type="Texture2D" uid="uid://g7ydhfo54fe6" path="res://sprites/perete.png" id="5_bwx76"]
+[ext_resource type="Texture2D" uid="uid://ex3ts40ed33h" path="res://sprites/Screenshot_2024-04-02_160547-removebg-preview.png" id="6_wvudn"]
+[ext_resource type="Texture2D" uid="uid://q7mvorxppr7m" path="res://sprites/hol_usa_inchisa.png" id="7_jmnwj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oumx7"]
+size = Vector2(2151, 123)
+
+[node name="hol_stanga" type="Node2D"]
+script = ExtResource("1_v4nhx")
+
+[node name="hol" type="Sprite2D" parent="."]
+position = Vector2(1085, 542.75)
+scale = Vector2(31, 31.0143)
+texture = ExtResource("2_fwxco")
+flip_h = true
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+energy = 0.95
+blend_mode = 1
+
+[node name="LuminaMica" type="PointLight2D" parent="."]
+position = Vector2(1087, 545)
+scale = Vector2(1.34625, 0.901667)
+energy = 0.3
+texture = ExtResource("3_pkdxh")
+texture_scale = 2.0
+
+[node name="LuminaMare" type="PointLight2D" parent="."]
+position = Vector2(1501, 634)
+scale = Vector2(0.84933, 0.875)
+energy = 1.7
+texture = ExtResource("4_3bdqn")
+texture_scale = 3.5
+
+[node name="Go_Back" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Go_Back"]
+position = Vector2(1094, 1016.5)
+shape = SubResource("RectangleShape2D_oumx7")
+
+[node name="Dreamy" type="Sprite2D" parent="."]
+position = Vector2(1748, 659)
+rotation = -0.349066
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_wvudn")
+
+[node name="DreamyClose" type="Sprite2D" parent="."]
+position = Vector2(1473, 895)
+rotation = -0.0698132
+scale = Vector2(2.4, 2.4)
+texture = ExtResource("6_wvudn")
+
+[node name="usa_hol_inchisa" type="Sprite2D" parent="."]
+position = Vector2(1085, 542.75)
+scale = Vector2(31, 31.0143)
+texture = ExtResource("7_jmnwj")
+flip_h = true
+
+[node name="Perete2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1953, 543)
+scale = Vector2(31, 31)
+texture = ExtResource("5_bwx76")
+flip_h = true
+
+[node name="door_timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="mouse_entered" from="Go_Back" to="." method="_on_go_back_mouse_entered"]
+[connection signal="mouse_exited" from="Go_Back" to="." method="_on_go_back_mouse_exited"]
+[connection signal="timeout" from="door_timer" to="." method="_on_door_timer_timeout"]

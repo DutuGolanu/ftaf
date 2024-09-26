@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bryd8jxk35r8j"]
+
+[ext_resource type="Texture2D" uid="uid://kt61enbsnpow" path="res://sprites/Screenshot_2024-04-03_183022-removebg-preview.png" id="1_7unpl"]
+[ext_resource type="Script" path="res://love_and_light_tv.gd" id="1_rcclc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_l0m2r"]
+radius = 48.0
+height = 164.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 1
+script = ExtResource("1_rcclc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.90735e-06, 3.8147e-06)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_7unpl")
+
+[node name="detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detection_area"]
+position = Vector2(2, -4)
+shape = SubResource("CapsuleShape2D_l0m2r")

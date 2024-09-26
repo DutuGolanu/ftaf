@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://dk1odrresefis"]
+
+[ext_resource type="Script" path="res://BrandonJumpScare.gd" id="1_84nkq"]
+[ext_resource type="Texture2D" uid="uid://iombo211lffq" path="res://sprites/Screenshot_2024-04-01_200719-removebg-preview.png" id="2_3gywn"]
+[ext_resource type="AudioStream" uid="uid://c0fg7rkayt4tp" path="res://audio/m2-res_480p (mp3cut.net).mp3" id="3_ul4yp"]
+
+[node name="BrandonJumpScare" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_84nkq")
+
+[node name="brandon" type="Sprite2D" parent="."]
+position = Vector2(884, 763)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_3gywn")
+
+[node name="JumpScareSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ul4yp")
+volume_db = 5.0
+
+[node name="Timer" type="Timer" parent="."]
+process_mode = 3
+wait_time = 2.69
+one_shot = true
+
+[connection signal="brandon_jumpscare" from="." to="." method="_on_brandon_jumpscare"]
+[connection signal="finished" from="JumpScareSound" to="." method="_on_jump_scare_sound_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
